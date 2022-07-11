@@ -1,0 +1,44 @@
+.benefits__list {
+    display: flex;
+}
+
+.benefits__item {
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+
+.benefits__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.143;
+}
+
+
+.benefits__description {
+    color: $secondary-text-color;
+    line-height: 1.714;
+}
+
+
+/* ИКОНКИ ПРЕИМУЩЕСТВ */
+
+.attention {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+}
+
+.attention__icon {
+    width: 70px;
+    height: 70px;
+
+}

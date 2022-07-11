@@ -1,0 +1,258 @@
+.backdrop {
+    position: fixed;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    & .modal {
+            transform: translate(-50%, -50%) scale(2);
+    
+    
+        }
+}
+
+
+
+.modal {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+    background-color: $white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+
+
+}
+
+.modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.icon-modal-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:focus>.icon-modal-close {
+    fill: $brand-color;
+}
+
+.modal-button:hover>.icon-modal-close {
+    fill: $brand-color;
+}
+/* ФОРМА МОДАЛКИ */
+
+
+
+
+
+.form__text {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+
+
+.form-group {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 58px;
+    margin-bottom: 10px;
+
+}
+
+.coment-group {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 138px;
+    margin-bottom: 20px;
+}
+
+
+.form-group:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.form-lable {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+
+.icon-person {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-text {
+    position: absolute;
+    display: block;
+    top: -18px;
+    left: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+}
+
+.form-input {
+    height: 40px;
+    width: 100%;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:focus {
+        border-color: $brand-color;
+    }
+
+    &:focus+.icon-person {
+        fill: $brand-color;
+    }
+}
+
+
+
+
+.coment-input {
+    display: block;
+    padding: 12px 16px;
+    height: 120px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:focus {
+            border-color: $brand-color;
+        }
+}
+
+
+
+
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.checkbox-field {
+    margin-bottom: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 24px
+}
+
+
+.checkbox-input {
+    margin-right: 8px;
+}
+
+.checkbox-lable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+
+    & a {
+            text-decoration: underline;
+            color: #2196F3;
+        }
+}
+
+
+
+.icon-check {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), background-origin 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 8px;
+}
+
+.checkbox:checked+.icon-check {
+    fill: $brand-color;
+    background-color: $brand-color;
+    background-image: url(../images/icon-check.svg);
+    background-origin: border-box;
+}
+
+
+
+.button-form {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    padding: 10px 55px;
+    background: $brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    color: $white-color;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875em;
+    letter-spacing: 0.06em;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            background: #188CE8;
+        }
+}
+
+
+

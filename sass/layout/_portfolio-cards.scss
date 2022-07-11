@@ -1,0 +1,84 @@
+.portfolio-item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: $white-color;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+}
+
+.portfolio_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.portfolio-title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+.portfolio .about {
+    color: #757575;
+    font-size: 16px;
+    line-height: 1.875;
+}
+
+.portfolio-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.portfolio-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    }
+}
+
+/* Анимация портфолио */
+
+.portfolio-description {
+    position: absolute;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.555em;
+    letter-spacing: 0.03em;
+    color: $white-color;
+
+    .portfolio-link:hover &,
+    .portfolio-link:focus & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
