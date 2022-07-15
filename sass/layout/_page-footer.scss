@@ -120,6 +120,7 @@
 .join-us {
     // margin-right: 93px;
     width: 206px;
+    max-width: 100%;
     height: 80px;
 
     @media screen and (max-width: 1199px) {
@@ -173,6 +174,7 @@
 .email-input {
     
     width: 450px;
+    max-width: 100%;
     height: 156px;
     @media screen and (max-width: 1199px) {
         display: flex;
@@ -192,14 +194,19 @@
 }
 
 .email-input__title {
-    display: inline-block;
+    text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     color: $white-color;
     line-height: 1.143em;
     letter-spacing: 0.03em;
-    text-transform: uppercase
+    text-transform: uppercase;
+    
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+    
 }
 
 .footer-form {
@@ -209,14 +216,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        max-width: 100%;
         }
+    
 }
 
 
 .footer-form__input {
     margin-bottom: 20px;
-    padding: 15px 15px 15px 16px;
-    width: 358px;
+    padding: 15px 15px 15px 15px;
+    width: 450px;
+    max-width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -230,6 +241,11 @@
     &:focus {
         color: $white-color;
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        
+    }
 }
 
 
@@ -238,6 +254,7 @@
     align-items: center;
     justify-content: space-between;
     width: 200px;
+    max-width: 100%;
     height: 50px;
     padding: 10px 28px 10px 28px;
     color: $white-color;
