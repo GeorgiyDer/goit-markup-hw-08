@@ -5,6 +5,10 @@ body {
     letter-spacing: 0.03em;
     font-size: 14px;
 }
+
+body.menu-open {
+    overflow: hidden;
+}
 img {
     max-width: 100%;
 }
