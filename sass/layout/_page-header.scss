@@ -138,6 +138,8 @@
 
 
 .contacts-nav__icon {
+    display: flex;
+    justify-content: flex-start;
     width: 14px;
     height: 14px;
     fill: currentColor;

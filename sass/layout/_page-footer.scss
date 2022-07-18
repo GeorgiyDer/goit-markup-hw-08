@@ -76,7 +76,9 @@
 
 .footer-contacts {
     font-style: normal;
-
+    &__item {
+        height: 100%;
+    }
     &__item:not(:last-child) {
         margin-bottom: 8px;
     }
