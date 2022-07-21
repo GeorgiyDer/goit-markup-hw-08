@@ -50,10 +50,17 @@
     font-size: 40px;
     line-height: 1.175;
     letter-spacing: 0.02em;
-    margin-bottom: 320px;
+    
     &__item:not(:last-child) {
         margin-bottom: 32px;
     }
+        @media screen and (max-width: 379px) {
+            margin-bottom: 140px;
+        }
+    
+        @media screen and (min-width: 380px) {
+            margin-bottom: 302px;
+        }
 }
 
 .menu-nav__link:hover,
@@ -75,10 +82,16 @@
 
 .menu-contacts__link-tel {
     font-weight: 500;
-    font-size: 34px;
+    // font-size: 34px;
     line-height: 1.176em;
     letter-spacing: 0.02em;
     color: $brand-color;
+    @media screen and (max-width: 379px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 380px) {
+        font-size: 34px;
+    }
     
 }
 .menu-contacts__link-mail {
@@ -93,17 +106,37 @@
     display: flex;
     flex-wrap: wrap;
     
+    @media screen and (max-width: 396px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 397px) {
+        font-size: 14px;
+    }
 }
 
 .menu-social__item {
-    margin-right: 10px;
+    
     &:not(:last-child) {
             border-right: 1px solid rgba(33, 33, 33, 0.2);
         }
+    @media screen and (max-width: 396px) {
+        margin-right: 4px;
+    }
+
+    @media screen and (min-width: 397px) {
+        margin-right: 10px;
+    }
 }
 
 .menu-social__link {
     color: $brand-color;
-    margin-right: 10px;
     
+    @media screen and (max-width: 396px) {
+        margin-right: 4px;
+    }
+
+    @media screen and (min-width: 397px) {
+        margin-right: 10px;
+    }
 }

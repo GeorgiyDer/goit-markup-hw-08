@@ -1590,10 +1590,19 @@ textarea {
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  margin-bottom: 320px;
 }
 .menu-nav__item:not(:last-child) {
   margin-bottom: 32px;
+}
+@media screen and (max-width: 379px) {
+  .menu-nav {
+    margin-bottom: 140px;
+  }
+}
+@media screen and (min-width: 380px) {
+  .menu-nav {
+    margin-bottom: 302px;
+  }
 }
 
 .menu-nav__link:hover,
@@ -1615,10 +1624,19 @@ textarea {
 
 .menu-contacts__link-tel {
   font-weight: 500;
-  font-size: 34px;
   line-height: 1.176em;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (max-width: 379px) {
+  .menu-contacts__link-tel {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 380px) {
+  .menu-contacts__link-tel {
+    font-size: 34px;
+  }
 }
 
 .menu-contacts__link-mail {
@@ -1636,15 +1654,41 @@ textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
-.menu-social__item {
-  margin-right: 10px;
+@media screen and (max-width: 396px) {
+  .menu-social {
+    font-size: 12px;
+  }
 }
+@media screen and (min-width: 397px) {
+  .menu-social {
+    font-size: 14px;
+  }
+}
+
 .menu-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 396px) {
+  .menu-social__item {
+    margin-right: 4px;
+  }
+}
+@media screen and (min-width: 397px) {
+  .menu-social__item {
+    margin-right: 10px;
+  }
 }
 
 .menu-social__link {
   color: #2196F3;
-  margin-right: 10px;
+}
+@media screen and (max-width: 396px) {
+  .menu-social__link {
+    margin-right: 4px;
+  }
+}
+@media screen and (min-width: 397px) {
+  .menu-social__link {
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
